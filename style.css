@@ -988,6 +988,17 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+  .section-pad { padding: 4rem 0; }
+  .title { font-size: clamp(2rem, 8vw, 2.5rem); }
+  .hero-title { font-size: clamp(3rem, 12vw, 4rem); }
+  
+  .about-stats { grid-template-columns: 1fr; gap: 1rem; }
+  
+  .education-card { flex-direction: column; text-align: center; padding: 1.5rem; }
+  
+  .contact-card { padding: 1.5rem; }
+  .contact-card-header { flex-direction: column; text-align: center; }
+
   .nav-links {
     position: absolute;
     top: 100%;
