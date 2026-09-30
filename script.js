@@ -1,221 +1,292 @@
+/**
+ * Erick Zachary Cantona — Portfolio Interactive Scripts
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Loader ---
+  // =========================================================================
+  // 1. Loader Handling (Fast & Smooth)
+  // =========================================================================
   const loader = document.getElementById('loader');
   if (loader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        loader.classList.add('hidden');
-      }, 2000);
-    });
-    // Fallback if load takes too long
-    setTimeout(() => {
+    const hideLoader = () => {
       loader.classList.add('hidden');
-    }, 4000);
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 450);
+    };
+
+    window.addEventListener('load', hideLoader);
+    // Safety fallback (ensures loader never gets stuck)
+    setTimeout(hideLoader, 1200);
   }
 
-  // --- Custom Cursor ---
-  const cursor = document.getElementById('cursorDot');
-  if (cursor && window.matchMedia('(pointer: fine)').matches) {
+  // =========================================================================
+  // 2. Custom Smooth Cursor
+  // =========================================================================
+  const cursorDot = document.getElementById('cursorDot');
+  const cursorRing = document.getElementById('cursorRing');
+
+  if (cursorDot && cursorRing && window.matchMedia('(pointer: fine)').matches) {
+    let mouseX = 0;
+    let mouseY = 0;
+    let ringX = 0;
+    let ringY = 0;
+
     document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = `${mouseX}px`;
+      cursorDot.style.top = `${mouseY}px`;
     });
 
-    // Cursor hover effects on links/buttons
-    const hoverElements = document.querySelectorAll('a, button, .portfolio-card, .portfolio-video-card');
-    hoverElements.forEach(el => {
-      el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%, -50%) scale(2.5)');
-      el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%, -50%) scale(1)');
+    const animateRing = () => {
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
+      cursorRing.style.left = `${ringX}px`;
+      cursorRing.style.top = `${ringY}px`;
+      requestAnimationFrame(animateRing);
+    };
+    requestAnimationFrame(animateRing);
+
+    // Hover effect on interactable elements
+    const hoverTargets = document.querySelectorAll('a, button, .portfolio-card, .tab-btn, .contact-card-item');
+    hoverTargets.forEach((target) => {
+      target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
     });
   }
 
-  // --- Navigation & Scroll ---
-  const navbar = document.getElementById('navbar');
+  // =========================================================================
+  // 3. Navigation & Scroll Effects
+  // =========================================================================
+  const navbar = document.querySelector('.navbar-wrapper');
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
+    if (window.scrollY > 40) {
+      navbar?.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled');
+      navbar?.classList.remove('scrolled');
     }
   }, { passive: true });
 
-  if (navToggle) {
+  if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      navLinks.classList.toggle('is-active');
     });
-    
-    // Close nav when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
+
+    // Close on link click
+    navLinks.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        navLinks.classList.remove('is-active');
       });
     });
   }
 
-  // --- Smooth Scroll for Hash Links ---
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId !== '#') {
-        e.preventDefault();
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      }
-    });
-  });
-
-  // --- Hero Animations ---
-  const animateElements = document.querySelectorAll('.animate-in');
-  animateElements.forEach((el, index) => {
-    setTimeout(() => {
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-      el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-    }, 2200 + (index * 150)); // Start after loader
-  });
-
-  // --- Scroll Reveal ---
+  // =========================================================================
+  // 4. Scroll Reveal Animations & Stats Counter
+  // =========================================================================
   const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        // If it's a skill bar, actuate it
-        if (entry.target.classList.contains('skills-grid')) {
-          const fills = entry.target.querySelectorAll('.skill-fill');
-          fills.forEach(fill => {
-            fill.style.width = fill.getAttribute('data-width') + '%';
-          });
+  const statNumbers = document.querySelectorAll('.stat-number');
+  let statsCounted = false;
+
+  const countUpStats = () => {
+    if (statsCounted) return;
+    statsCounted = true;
+
+    statNumbers.forEach((stat) => {
+      const target = parseInt(stat.getAttribute('data-target'), 10) || 0;
+      let count = 0;
+      const speed = Math.max(20, Math.floor(1500 / target));
+
+      const timer = setInterval(() => {
+        count += 1;
+        stat.textContent = `${count}+`;
+        if (count >= target) {
+          clearInterval(timer);
+          stat.textContent = `${target}+`;
         }
-        observer.unobserve(entry.target);
+      }, speed);
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+
+        if (entry.target.querySelector('.stat-number')) {
+          countUpStats();
+        }
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+  revealElements.forEach((el) => observer.observe(el));
 
-  // --- Portfolio Filtering ---
-  const filterTabs = document.querySelectorAll('.filter-tab');
+  // =========================================================================
+  // 5. Portfolio Filtering Logic
+  // =========================================================================
+  const tabButtons = document.querySelectorAll('.tab-btn');
   const portfolioCards = document.querySelectorAll('.portfolio-card');
 
-  filterTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // Remove active class from all tabs
-      filterTabs.forEach(t => t.classList.remove('active'));
-      // Add active class to clicked tab
-      tab.classList.add('active');
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
 
-      const filterValue = tab.getAttribute('data-filter');
+      const filter = btn.getAttribute('data-filter');
 
-      portfolioCards.forEach(card => {
+      portfolioCards.forEach((card) => {
         const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || filterValue === category) {
-          card.classList.remove('hidden');
-          setTimeout(() => card.style.opacity = '1', 50);
+        if (filter === 'all' || category === filter) {
+          card.classList.remove('is-hidden');
         } else {
-          card.classList.add('hidden');
-          card.style.opacity = '0';
+          card.classList.add('is-hidden');
         }
       });
     });
   });
 
-  // --- Video Playing Handling ---
-  const videoCards = document.querySelectorAll('.portfolio-video-card');
-  videoCards.forEach(card => {
-    const video = card.querySelector('video');
-    
-    card.addEventListener('click', () => {
-      if (video.paused) {
-        // Pause all other videos first
-        document.querySelectorAll('video').forEach(v => {
-          if(v !== video) {
-            v.pause();
-            v.closest('.portfolio-video-card')?.classList.remove('playing');
-          }
-        });
-        
-        video.muted = false;
-        video.play();
-        card.classList.add('playing');
-      } else {
-        video.pause();
-        card.classList.remove('playing');
-      }
-    });
-
-    video.addEventListener('ended', () => {
-      card.classList.remove('playing');
-    });
-  });
-
-  // --- Lightbox Logic ---
-  const lightbox = document.getElementById('lightbox');
-  const lightboxContent = document.getElementById('lightboxContent');
-  const lightboxClose = document.getElementById('lightboxClose');
-  
-  if(lightbox && lightboxContent && lightboxClose) {
-    // Collect all click targets (images and videos) in the portfolio grid
-    const mediaItems = document.querySelectorAll('.portfolio-media img, .portfolio-media video');
-    
-    mediaItems.forEach(item => {
-      // Modify cursor behavior for clickable media
-      item.style.cursor = 'pointer';
-      
-      item.addEventListener('click', (e) => {
-        // Prevent event from bubbling to video play button logic
-        e.stopPropagation();
-        
-        // Clear previous content
-        lightboxContent.innerHTML = '';
-        
-        if(item.tagName === 'IMG') {
-          const img = document.createElement('img');
-          img.src = item.src;
-          img.alt = item.alt;
-          lightboxContent.appendChild(img);
-        } else if(item.tagName === 'VIDEO') {
-          const video = document.createElement('video');
-          video.src = item.src;
-          video.controls = true;
-          video.autoplay = true;
-          lightboxContent.appendChild(video);
+  // =========================================================================
+  // 6. Video Preview & Poster Frame Fix
+  // =========================================================================
+  const allVideos = document.querySelectorAll('video');
+  allVideos.forEach((vid) => {
+    const setPosterFrame = () => {
+      try {
+        if (vid.currentTime < 0.1) {
+          vid.currentTime = 0.5;
         }
-        
-        lightbox.classList.add('active');
-      });
-    });
-
-    // Close lightbox functions
-    const closeLightbox = () => {
-      lightbox.classList.remove('active');
-      // Stop checking if it's a video
-      const vid = lightboxContent.querySelector('video');
-      if(vid) vid.pause();
-      setTimeout(() => { lightboxContent.innerHTML = ''; }, 400); // clear after transition
+      } catch (e) {}
     };
 
-    lightboxClose.addEventListener('click', closeLightbox);
-    
-    lightbox.addEventListener('click', (e) => {
-      if(e.target === lightbox) {
-        closeLightbox();
+    vid.addEventListener('loadedmetadata', setPosterFrame);
+    vid.addEventListener('loadeddata', setPosterFrame);
+    vid.addEventListener('canplay', setPosterFrame);
+    if (vid.readyState >= 1) {
+      setPosterFrame();
+    }
+  });
+
+  const videoCards = document.querySelectorAll('.portfolio-card.video-card');
+  videoCards.forEach((card) => {
+    const video = card.querySelector('video');
+    if (!video) return;
+
+    card.addEventListener('mouseenter', () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Auto-play was prevented, ignore
+        });
       }
     });
 
-    document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape' && lightbox.classList.contains('active')) {
+    card.addEventListener('mouseleave', () => {
+      video.pause();
+      try {
+        video.currentTime = 0.5;
+      } catch (e) {}
+    });
+  });
+
+  // =========================================================================
+  // 7. Lightbox Modal (Images & Full Videos)
+  // =========================================================================
+  const lightbox = document.getElementById('lightbox');
+  const lightboxMedia = document.getElementById('lightboxMediaContainer');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  const openLightbox = (type, src, title, desc) => {
+    if (!lightbox || !lightboxMedia) return;
+
+    lightboxMedia.innerHTML = '';
+
+    if (type === 'video') {
+      const videoEl = document.createElement('video');
+      videoEl.src = src;
+      videoEl.controls = true;
+      videoEl.autoplay = true;
+      videoEl.playsInline = true;
+      videoEl.muted = false;
+      lightboxMedia.appendChild(videoEl);
+    } else {
+      const imgEl = document.createElement('img');
+      imgEl.src = src;
+      imgEl.alt = title;
+      lightboxMedia.appendChild(imgEl);
+    }
+
+    if (lightboxTitle) lightboxTitle.textContent = title || 'Portofolio';
+    if (lightboxDesc) lightboxDesc.textContent = desc || '';
+
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    if (!lightbox) return;
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+    // Pause any playing video inside modal
+    const vid = lightboxMedia?.querySelector('video');
+    if (vid) {
+      vid.pause();
+    }
+    setTimeout(() => {
+      if (lightboxMedia) lightboxMedia.innerHTML = '';
+    }, 300);
+  };
+
+  // Attach click listener to each card
+  portfolioCards.forEach((card) => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const type = card.getAttribute('data-type');
+      const src = card.getAttribute('data-src');
+      const title = card.getAttribute('data-title');
+      const desc = card.getAttribute('data-desc');
+      openLightbox(type, src, title, desc);
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
         closeLightbox();
       }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox?.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+
+  // =========================================================================
+  // 8. Safe Fallback for Local File Protocol
+  // =========================================================================
+  if (window.location.protocol === 'file:') {
+    const allMedia = document.querySelectorAll('.portfolio-card img, .portfolio-card video');
+    allMedia.forEach((media) => {
+      media.addEventListener('error', () => {
+        const originalSrc = media.getAttribute('src');
+        if (originalSrc && !originalSrc.startsWith('file:///')) {
+          const documentsBase = 'file:///C:/Users/Erick/Documents/PORTOFOLIO%20ERICK/';
+          const cleanSrc = originalSrc.split('#')[0];
+          media.src = documentsBase + encodeURI(cleanSrc);
+        }
+      });
     });
   }
 

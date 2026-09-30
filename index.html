@@ -3,298 +3,1034 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Erick Zachary Cantona — Creative Director, AI Specialist, Video Editor, dan Content Creator. Portfolio profesional.">
-  <title>Erick Zachary Cantona — Creative Portfolio</title>
+  <meta name="description" content="Erick Zachary Cantona — Creative Director, AI Specialist, Video Editor, dan Social Media Manager. Portofolio profesional.">
+  <title>Erick Zachary Cantona</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Loader -->
+  <!-- Minimal Loader -->
   <div class="loader" id="loader">
-    <div class="loader-name">EZC</div>
-    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-content">
+      <div class="loader-brand">EZC</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
   </div>
 
-  <!-- Cursor -->
+  <!-- Custom Cursor -->
   <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- Navigation -->
-  <nav class="nav" id="navbar">
-    <a href="#hero" class="nav-brand">EZC</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#experience">Pengalaman</a></li>
-      <li><a href="#portfolio">Portofolio</a></li>
-      <li><a href="#skills">Keahlian</a></li>
-      <li><a href="#contact" class="nav-cta">Hubungi Saya</a></li>
-    </ul>
-    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
-  </nav>
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="nav container" id="navbar">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">EZC</span>
+        <span class="brand-text">Erick Cantona</span>
+      </a>
 
-  <!-- Hero -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#portfolio" class="nav-link">Work</a></li>
+        <li><a href="#skills" class="nav-link">Expertise</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
   <section class="hero" id="hero">
-    <div class="hero-grain"></div>
-    <div class="hero-gradient"></div>
     <div class="container hero-container">
       <div class="hero-content">
         <div class="hero-badge animate-in">
           <span class="pulse-dot"></span>
-          Open to Work — 2026
+          <span>Available for Selected Projects & Roles — 2026</span>
         </div>
+
         <h1 class="hero-title animate-in">
-          <span class="hero-line">Erick Zachary</span>
-          <span class="hero-line hero-line-outline">Cantona</span>
+          <span class="hero-name-gradient">Erick Zachary Cantona</span>
         </h1>
-        <p class="hero-role animate-in">Creative Director / AI Specialist / Content Creator</p>
-        <p class="hero-desc animate-in">Saya mengubah ide menjadi konten visual yang powerful — melalui AI, video editing, dan storytelling yang memukau.</p>
+
+        <p class="hero-role animate-in">
+          <span class="role-pill">Creative Director</span>
+          <span class="role-divider">/</span>
+          <span class="role-pill">AI Specialist</span>
+          <span class="role-divider">/</span>
+          <span class="role-pill">Social Media Strategist</span>
+        </p>
+
+        <p class="hero-desc animate-in">
+          Mengubah ide menjadi konten visual yang memikat dan berdampak tinggi. Spesialis dalam video editing dengan CapCut & Canva, AI generative video (Kling & Magnific AI), serta strategi pertumbuhan media sosial.
+        </p>
+
         <div class="hero-actions animate-in">
-          <a href="#portfolio" class="btn-primary">Lihat Karya Saya</a>
-          <a href="#contact" class="btn-ghost">Hubungi Saya</a>
+          <a href="#portfolio" class="btn btn-primary">
+            <span>Explore Work</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/6285938516986" target="_blank" class="btn btn-outline">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-meta animate-in">
+          <div class="meta-item">
+            <span>22 Tahun</span>
+          </div>
+          <div class="meta-item">
+            <span>•</span>
+          </div>
+          <div class="meta-item">
+            <span>Bandung, Indonesia</span>
+          </div>
+          <div class="meta-item">
+            <span>•</span>
+          </div>
+          <div class="meta-item">
+            <span>Universitas Pendidikan Indonesia (S1)</span>
+          </div>
         </div>
       </div>
-      <div class="hero-image animate-in">
-        <div class="hero-image-wrapper">
-          <img src="assets/profile.jpeg" alt="Erick Zachary Cantona">
-          <div class="hero-image-overlay"></div>
-        </div>
-        <div class="hero-image-badge">
-          <span>Bandung, Indonesia</span>
-          <strong>21 y.o.</strong>
+
+      <div class="hero-visual animate-in">
+        <div class="profile-card">
+          <div class="profile-frame">
+            <img src="assets/profile.jpeg" alt="Erick Zachary Cantona" class="profile-photo" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80'">
+          </div>
+          
+          <div class="floating-badge badge-top-right">
+            <div>
+              <strong>Droplets Workshop</strong>
+              <small>Social Media Management</small>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div>
+              <strong>22 Tahun</strong>
+              <small>AI & Video Editing Specialist</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="hero-scroll">
+
+    <a href="#about" class="hero-scroll-indicator" aria-label="Scroll down">
       <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+      <div class="scroll-chevron"></div>
+    </a>
   </section>
 
-  <!-- About -->
-  <section class="about section-pad" id="about">
+  <!-- Clean Typography Strip -->
+  <div class="ticker-wrapper">
+    <div class="ticker-track">
+      <div class="ticker-item">CAPCUT PRO</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">CANVA PRO</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">KLING AI</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">MAGNIFIC AI</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">RUNWAY GEN-3</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">ADOBE PREMIERE PRO</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">PHOTOSHOP</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">LIGHTROOM</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">MIDJOURNEY</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">SOCIAL MEDIA STRATEGY</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">WEDDING EVENT DIRECTION</div>
+      <div class="ticker-dot">•</div>
+      <!-- Loop Items -->
+      <div class="ticker-item">CAPCUT PRO</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">CANVA PRO</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">KLING AI</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">MAGNIFIC AI</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">RUNWAY GEN-3</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">ADOBE PREMIERE PRO</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">PHOTOSHOP</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">LIGHTROOM</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">MIDJOURNEY</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">SOCIAL MEDIA STRATEGY</div>
+      <div class="ticker-dot">•</div>
+      <div class="ticker-item">WEDDING EVENT DIRECTION</div>
+      <div class="ticker-dot">•</div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about section-spacing" id="about">
     <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Visual craft, driven by technology.</h2>
+        <p class="section-desc">Mengkombinasikan ketajaman estetika dengan teknologi AI untuk melahirkan media komersial yang berdaya saing.</p>
+      </div>
+
       <div class="about-grid">
-        <div class="about-left reveal">
-          <p class="label">Tentang Saya</p>
-          <h2 class="title">Kreatif. Adaptif.<br><span class="gradient-text">Berdampak.</span></h2>
-        </div>
-        <div class="about-right reveal">
-          <p class="body-text">Saya Erick Zachary Cantona, mahasiswa semester akhir Teknologi Pendidikan di Universitas Pendidikan Indonesia. Dengan passion di dunia kreatif digital, saya menguasai AI prompting, video editing, photo editing, dan social media management.</p>
-          <p class="body-text">Pengalaman saya meliputi menjadi editor dan host live streaming untuk brand fashion dan leather goods, mengelola Instagram multiple brands, serta bekerja sebagai wedding organizer. Saya percaya bahwa kreativitas dan teknologi AI adalah masa depan industri konten.</p>
-          <div class="about-stats">
-            <div class="about-stat"><div class="stat-num">3+</div><div class="stat-lbl">Tahun Pengalaman</div></div>
-            <div class="about-stat"><div class="stat-num">10+</div><div class="stat-lbl">Brand Ditangani</div></div>
-            <div class="about-stat"><div class="stat-num">50+</div><div class="stat-lbl">Proyek Selesai</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section class="experience section-pad" id="experience">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <p class="label">Pengalaman Kerja</p>
-        <h2 class="title">Perjalanan profesional saya.</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-date">2024 — Sekarang</div>
-          <div class="timeline-content">
-            <div class="timeline-badge">Aktif</div>
-            <h3>Wedding Organizer</h3>
-            <p>Menangani koordinasi dan dokumentasi acara pernikahan. Bertanggung jawab atas timeline event, vendor management, dan konten dokumentasi.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-date">2024 — Sekarang</div>
-          <div class="timeline-content">
-            <h3>Social Media Manager — Multiple Brands</h3>
-            <p>Mengelola akun Instagram beberapa brand. Membuat content plan, desain feed, copywriting, dan analisis engagement.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-date">2023 — 2026</div>
-          <div class="timeline-content">
-            <h3>Editor & Content Creator — Silverside</h3>
-            <p>Brand clothing. Bertanggung jawab atas seluruh konten visual, video editing (TikTok, Instagram Reels), foto produk, dan desain promotional materials.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-date">2024 — 2025</div>
-          <div class="timeline-content">
-            <h3>Host Live — Silverside</h3>
-            <p>Menjadi host live streaming untuk penjualan produk clothing di berbagai platform e-commerce.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-date">2024 — 2025</div>
-          <div class="timeline-content">
-            <h3>Host Live — Kael Leather Goods</h3>
-            <p>Menjadi host live streaming untuk brand produk kulit premium. Membantu meningkatkan penjualan dan brand awareness.</p>
-          </div>
-        </div>
-      </div>
-      <div class="education reveal">
-        <div class="education-card">
-          <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg></div>
+        <div class="about-text-col reveal">
           <div>
-            <h3>Universitas Pendidikan Indonesia</h3>
-            <p>Teknologi Pendidikan — Semester Akhir</p>
-            <span class="edu-year">2022 — 2026</span>
+            <p class="about-lead">
+              Saya <strong>Erick Zachary Cantona</strong>, berusia 22 tahun, profesional kreatif digital dan lulusan <strong>S1 Teknologi Pendidikan Universitas Pendidikan Indonesia</strong>.
+            </p>
+            <p class="about-p">
+              Saat ini, saya bertanggung jawab penuh atas <strong>Social Media Management di Droplets Workshop</strong>, mengelola strategi konten multiple brands, serta aktif memimpin koordinasi acara dan dokumentasi visual sebagai <strong>Wedding Organizer</strong>.
+            </p>
+            <p class="about-p">
+              Keahlian utama saya berfokus pada eksekusi cepat dan berkualitas tinggi menggunakan <strong>CapCut</strong> untuk video editing dinamis, <strong>Canva</strong> untuk visual grafik komersial, serta generasi video AI canggih melalui <strong>Kling AI</strong> dan <strong>Magnific AI</strong>.
+            </p>
+          </div>
+
+          <div class="about-stats-grid">
+            <div class="stat-card">
+              <span class="stat-number" data-target="3">3+</span>
+              <span class="stat-label">Years of Craft</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="15">15+</span>
+              <span class="stat-label">Brands Managed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="100">100+</span>
+              <span class="stat-label">Assets Produced</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards-col reveal">
+          <div class="focus-card">
+            <div class="focus-info">
+              <h3>CapCut Video Mastery</h3>
+              <p>Produksi video dengan pacing cepat, sound design tepat, transisi halus, dan hook kuat berorientasi engagement tinggi.</p>
+            </div>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-info">
+              <h3>Canva & Graphic Retouch</h3>
+              <p>Desain promosi, materi iklan e-commerce, feed media sosial, dan layout tipografi modern berkonversi tinggi.</p>
+            </div>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-info">
+              <h3>Generative Video (Kling & Magnific)</h3>
+              <p>Penciptaan video sinematik berbasis AI, upscaling detail tekstur fotorealistik, dan manipulasi visual tingkat lanjut.</p>
+            </div>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-info">
+              <h3>Social Media Growth & Events</h3>
+              <p>Pengelolaan kalender editorial brand, siaran langsung penjualan (live host), dan manajemen dokumentasi event.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section class="portfolio section-pad" id="portfolio">
+  <!-- Experience & Education Section -->
+  <section class="experience section-spacing" id="experience">
     <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <p class="label">Portofolio</p>
-        <h2 class="title">Karya-karya pilihan saya.</h2>
-        <p class="desc" style="margin:0 auto 48px;">Setiap karya mencerminkan dedikasi, kreativitas, dan penguasaan tools — baik manual maupun AI.</p>
+      <div class="section-header reveal">
+        <span class="section-tag">Career & Background</span>
+        <h2 class="section-title">Experience & Education</h2>
+        <p class="section-desc">Rekam jejak profesional dalam industri kreatif dan institusi pendidikan formal.</p>
       </div>
 
-      <!-- Filter -->
-      <div class="filter-tabs reveal">
-        <button class="filter-tab active" data-filter="all">Semua</button>
-        <button class="filter-tab" data-filter="ai-photo">AI Photo</button>
-        <button class="filter-tab" data-filter="photo-editing">Photo Editing</button>
-        <button class="filter-tab" data-filter="video">Video</button>
+      <div class="experience-layout">
+        <!-- Work Experience Timeline -->
+        <div class="timeline-column reveal">
+          <div class="timeline-column-header">
+            <h3>Work Experience</h3>
+          </div>
+
+          <div class="timeline-list">
+            <!-- Droplets Workshop -->
+            <div class="timeline-card active-job">
+              <div class="timeline-time-badge">
+                <span class="badge-status-dot"></span>
+                <strong>2026 — Present</strong>
+                <span class="status-pill">Active</span>
+              </div>
+              <h4 class="timeline-role">Social Media Management</h4>
+              <p class="timeline-company">Droplets Workshop</p>
+              <p class="timeline-details">
+                Memimpin strategi sosial media, content calendar, pembuatan konten video & foto promosi, serta optimasi engagement audiens.
+              </p>
+            </div>
+
+            <!-- Wedding Organizer -->
+            <div class="timeline-card active-job">
+              <div class="timeline-time-badge">
+                <span class="badge-status-dot"></span>
+                <strong>2024 — Present</strong>
+                <span class="status-pill">Active</span>
+              </div>
+              <h4 class="timeline-role">Wedding Organizer</h4>
+              <p class="timeline-company">Event & Wedding Documentation</p>
+              <p class="timeline-details">
+                Koordinasi menyeluruh acara pernikahan, manajemen vendor, timeline event, serta supervisi dokumentasi visual momen istimewa.
+              </p>
+            </div>
+
+            <!-- Social Media Manager - Multiple Brands -->
+            <div class="timeline-card active-job">
+              <div class="timeline-time-badge">
+                <span class="badge-status-dot"></span>
+                <strong>2024 — Present</strong>
+                <span class="status-pill">Active</span>
+              </div>
+              <h4 class="timeline-role">Social Media Manager</h4>
+              <p class="timeline-company">Multiple Brands</p>
+              <p class="timeline-details">
+                Mengelola akun media sosial berbagai brand: merancang editorial calendar, copywriting, desain feed, dan analisis pertumbuhan metrik.
+              </p>
+            </div>
+
+            <!-- Silverside -->
+            <div class="timeline-card">
+              <div class="timeline-time-badge">
+                <strong>2023 — 2026</strong>
+              </div>
+              <h4 class="timeline-role">Editor & Content Creator</h4>
+              <p class="timeline-company">Silverside</p>
+              <p class="timeline-details">
+                Bertanggung jawab atas seluruh aset konten visual: video editing TikTok dan Instagram Reels, fotografi produk, dan kampanye promosi.
+              </p>
+            </div>
+
+            <!-- Host Live -->
+            <div class="timeline-card">
+              <div class="timeline-time-badge">
+                <strong>2024 — 2025</strong>
+              </div>
+              <h4 class="timeline-role">Live Stream Host</h4>
+              <p class="timeline-company">Silverside & Kael Leather Goods</p>
+              <p class="timeline-details">
+                Memandu sesi live broadcast penjualan interaktif untuk produk pakaian dan kerajinan kulit premium dengan tingkat konversi tinggi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Column -->
+        <div class="education-column reveal">
+          <div class="timeline-column-header">
+            <h3>Education</h3>
+          </div>
+
+          <div class="education-list">
+            <!-- UPI -->
+            <div class="education-card">
+              <div class="edu-badge">Higher Education</div>
+              <h4 class="edu-school">Universitas Pendidikan Indonesia</h4>
+              <p class="edu-major">S1 — Teknologi Pendidikan</p>
+              <p class="edu-time">2022 — 2026</p>
+              <p class="edu-desc">
+                Fokus pada perancangan media instruksional, teknologi komunikasi visual, pengembangan kurikulum konten, dan produksi multimedia edukatif.
+              </p>
+            </div>
+
+            <!-- MA Persis -->
+            <div class="education-card">
+              <div class="edu-badge">Senior High School</div>
+              <h4 class="edu-school">MA Persis Kota Bandung</h4>
+              <p class="edu-major">Madrasah Aliyah</p>
+              <p class="edu-time">2019 — 2022</p>
+              <p class="edu-desc">
+                Membangun pondasi komunikasi, kepemimpinan organisasi, serta eksplorasi awal ketertarikan pada seni visual dan multimedia.
+              </p>
+            </div>
+
+            <!-- MTs Persis 1 -->
+            <div class="education-card">
+              <div class="edu-badge">Junior High School</div>
+              <h4 class="edu-school">MTs Persis 1 Bandung</h4>
+              <p class="edu-major">Madrasah Tsanawiyah</p>
+              <p class="edu-time">2016 — 2019</p>
+              <p class="edu-desc">
+                Pendidikan dasar disiplin, karakter, dan pengenalan kreativitas teknologi informasi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Showcase Section -->
+  <section class="portfolio section-spacing" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Selected Works</h2>
+        <p class="section-desc">Koleksi karya dalam 4 disiplin: AI Video, AI Photography, Photo Editing, dan Video Editing. Klik video untuk memutar langsung.</p>
       </div>
 
-      <!-- Grid -->
+      <!-- Category Filter Tabs (Apple Segmented Style) -->
+      <div class="portfolio-tabs-wrapper reveal">
+        <div class="portfolio-tabs" id="portfolioTabs">
+          <button class="tab-btn active" data-filter="all">
+            <span>All</span>
+            <span class="tab-count">36</span>
+          </button>
+          <button class="tab-btn" data-filter="video-ai">
+            <span>AI Video</span>
+            <span class="tab-count">7</span>
+          </button>
+          <button class="tab-btn" data-filter="foto-ai">
+            <span>AI Photography</span>
+            <span class="tab-count">10</span>
+          </button>
+          <button class="tab-btn" data-filter="foto-editing">
+            <span>Photo Editing</span>
+            <span class="tab-count">11</span>
+          </button>
+          <button class="tab-btn" data-filter="video-editing">
+            <span>Video Editing</span>
+            <span class="tab-count">8</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid -->
       <div class="portfolio-grid" id="portfolioGrid">
-        <!-- AI Photo -->
-        <div class="portfolio-card reveal" data-category="ai-photo">
-          <div class="portfolio-media"><img src="assets/portfolio/ai-photo/ai-1.png" alt="Ohio Backpack - AI Generated" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">AI Photo</span><h3>Ohio Backpack — Product Visual</h3><p>AI-generated product advertisement untuk brand KAEL</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="ai-photo">
-          <div class="portfolio-media"><img src="assets/portfolio/ai-photo/ai-2.png" alt="Cherokee Pouch - AI Generated" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">AI Photo</span><h3>Cherokee Pouch — Product Visual</h3><p>AI-generated luxury product photography</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="ai-photo">
-          <div class="portfolio-media"><img src="assets/portfolio/ai-photo/ai-3.png" alt="Cherokee Double Zipper" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">AI Photo</span><h3>Cherokee Double Zipper</h3><p>Multi-variant product visualization dengan AI</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="ai-photo">
-          <div class="portfolio-media"><img src="assets/portfolio/ai-photo/ai-4.png" alt="Oregon Backpack" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">AI Photo</span><h3>Oregon Backpack — Workshop Setting</h3><p>AI-generated lifestyle product photography</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="ai-photo">
-          <div class="portfolio-media"><img src="assets/portfolio/ai-photo/ai-5.jpg" alt="Diamond Backpack" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">AI Photo</span><h3>Diamond Backpack — Model Shoot</h3><p>AI-generated model with product placement</p></div>
+
+        <!-- ==================== 1. VIDEO AI ==================== -->
+        <div class="portfolio-card video-card" data-category="video-ai" data-type="video" data-src="assets/portfolio/video-ai/vid-ai-05.mp4" data-title="Droplets Workshop — Promo AI" data-desc="Video promosi dengan visual AI dinamis dan pacing modern untuk Droplets Workshop.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-ai/vid-ai-05.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">AI Video</span>
+          </div>
+          <div class="card-caption">
+            <h3>Droplets Workshop Promo</h3>
+            <p>Generative visual motion campaign</p>
+          </div>
         </div>
 
-        <!-- Photo Editing -->
-        <div class="portfolio-card reveal" data-category="photo-editing">
-          <div class="portfolio-media"><img src="assets/portfolio/photo-editing/edit-1.jpg" alt="Poster Live Silverside" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">Photo Editing</span><h3>Poster Live — Silverside x Fabriku</h3><p>Promotional poster untuk live streaming event</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="photo-editing">
-          <div class="portfolio-media"><img src="assets/portfolio/photo-editing/edit-2.jpg" alt="Payday Sale Silverside" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">Photo Editing</span><h3>Payday Sale — Silverside</h3><p>Promotional campaign design untuk payday sale</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="photo-editing">
-          <div class="portfolio-media"><img src="assets/portfolio/photo-editing/edit-3.jpg" alt="Coming Soon Silverside" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">Photo Editing</span><h3>Coming Soon — New Collection</h3><p>Teaser design untuk peluncuran koleksi baru</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="photo-editing">
-          <div class="portfolio-media"><img src="assets/portfolio/photo-editing/edit-4.jpg" alt="Article Falcon Evolution" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">Photo Editing</span><h3>Falcon Evolution — Silverside</h3><p>Product shoot compositing & graphic design</p></div>
-        </div>
-        <div class="portfolio-card reveal" data-category="photo-editing">
-          <div class="portfolio-media"><img src="assets/portfolio/photo-editing/edit-5.jpg" alt="Fury Silverside" loading="lazy"></div>
-          <div class="portfolio-info"><span class="portfolio-tag">Photo Editing</span><h3>Fury Collection — Silverside</h3><p>Full-body product compositing with background design</p></div>
+        <div class="portfolio-card video-card" data-category="video-ai" data-type="video" data-src="assets/portfolio/video-ai/vid-ai-02.mp4" data-title="Ageless — Cinematic AI Video" data-desc="Cinematic storytelling menggunakan text-to-video prompt tingkat lanjut dan color grading sinematik.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-ai/vid-ai-02.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">AI Video</span>
+          </div>
+          <div class="card-caption">
+            <h3>Ageless Cinematic</h3>
+            <p>Prompt-to-video storytelling</p>
+          </div>
         </div>
 
-        <!-- Video -->
-        <div class="portfolio-card portfolio-video-card reveal" data-category="video">
-          <div class="portfolio-media">
-            <video src="assets/portfolio/video-ai/vid-ai-1.mp4" preload="metadata" muted playsinline></video>
-            <div class="video-play-icon"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+        <div class="portfolio-card video-card" data-category="video-ai" data-type="video" data-src="assets/portfolio/video-ai/vid-ai-03.mp4" data-title="Greaper AI Character Creation" data-desc="Eksplorasi pembuatan karakter unik dan transformasi visual dengan teknologi AI.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-ai/vid-ai-03.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">AI Video</span>
           </div>
-          <div class="portfolio-info"><span class="portfolio-tag">AI Video</span><h3>Ageless — AI Generated Video</h3><p>Cinematic AI video generation dengan advanced prompting</p></div>
-        </div>
-        <div class="portfolio-card portfolio-video-card reveal" data-category="video">
-          <div class="portfolio-media">
-            <video src="assets/portfolio/video-editing/vid-edit-1.mp4" preload="metadata" muted playsinline></video>
-            <div class="video-play-icon"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+          <div class="card-caption">
+            <h3>Greaper Character Creation</h3>
+            <p>AI character design & motion</p>
           </div>
-          <div class="portfolio-info"><span class="portfolio-tag">Video Editing</span><h3>Silverside — Brand Campaign</h3><p>Short-form video content untuk social media</p></div>
         </div>
-        <div class="portfolio-card portfolio-video-card reveal" data-category="video">
-          <div class="portfolio-media">
-            <video src="assets/portfolio/video-editing/vid-edit-2.mp4" preload="metadata" muted playsinline></video>
-            <div class="video-play-icon"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+
+        <div class="portfolio-card video-card" data-category="video-ai" data-type="video" data-src="assets/portfolio/video-ai/vid-ai-06.mp4" data-title="Greaper Cinematic Motion" data-desc="Eksplorasi visual motion dengan depth of field dan efek atmosfer AI.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-ai/vid-ai-06.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">AI Video</span>
           </div>
-          <div class="portfolio-info"><span class="portfolio-tag">Video Editing</span><h3>Video Editing Showreel</h3><p>Compilation dari berbagai project editing</p></div>
+          <div class="card-caption">
+            <h3>Greaper Cinematic Motion</h3>
+            <p>Atmospheric dynamic motion</p>
+          </div>
         </div>
+
+        <div class="portfolio-card video-card" data-category="video-ai" data-type="video" data-src="assets/portfolio/video-ai/vid-ai-07.mp4" data-title="Wisdom AI — Conceptual Narrative" data-desc="Konsep visual filosofis dengan transisi AI yang halus dan kaya tekstur visual.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-ai/vid-ai-07.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">AI Video</span>
+          </div>
+          <div class="card-caption">
+            <h3>Wisdom AI Narrative</h3>
+            <p>Conceptual AI visual sequence</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-ai" data-type="video" data-src="assets/portfolio/video-ai/vid-ai-04.mp4" data-title="AI Motion Experiment" data-desc="Eksperimen movement dan lighting realism dengan video generator AI.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-ai/vid-ai-04.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">AI Video</span>
+          </div>
+          <div class="card-caption">
+            <h3>AI Motion Experiment</h3>
+            <p>Generative movement study</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-ai" data-type="video" data-src="assets/portfolio/video-ai/vid-ai-01.mp4" data-title="Generative Visual Concept" data-desc="Kompilasi sekuens AI dengan tone visual berani dan futuristik.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-ai/vid-ai-01.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">AI Video</span>
+          </div>
+          <div class="card-caption">
+            <h3>Generative Concept 0819</h3>
+            <p>Futuristic generative motion</p>
+          </div>
+        </div>
+
+
+        <!-- ==================== 2. FOTO AI ==================== -->
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-01.jpg" data-title="Commercial Product Shoot 01" data-desc="Visual produk dengan pencahayaan studio ultra-realistis dan staging AI.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-01.jpg" alt="Commercial Product Shoot 01" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Product Shoot 01</h3>
+            <p>Studio lighting AI visualization</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-02.jpg" data-title="Commercial Product Shoot 02" data-desc="Fotografi produk bergaya editorial dengan detail material kulit dan ambient shadow.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-02.jpg" alt="Commercial Product Shoot 02" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Product Shoot 02</h3>
+            <p>Editorial leather goods staging</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-03.jpg" data-title="Fashion Lifestyle Concept" data-desc="Generasi model fashion dengan styling outfit kontemporer dan pose dinamis.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-03.jpg" alt="Fashion Lifestyle" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Fashion Lifestyle</h3>
+            <p>Generative streetwear aesthetic</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-04.jpg" data-title="Editorial Portrait Concept" data-desc="Potret editorial dengan tone warna sinematik dan pencahayaan moody.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-04.jpg" alt="Editorial Portrait" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Editorial Portrait</h3>
+            <p>Cinematic moody lighting</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-05.jpg" data-title="Artwork & Branding Visual" data-desc="Eksplorasi visual branding dan ilustrasi digital berbasis generative AI.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-05.jpg" alt="Artwork" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Branding Artwork Visual</h3>
+            <p>Digital generative artwork</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-06.png" data-title="Leather Goods Staging" data-desc="Render staging produk kerajinan kulit dengan komposisi presisi tinggi.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-06.png" alt="Leather Goods" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Leather Pouch Staging</h3>
+            <p>High-precision shadow render</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-07.png" data-title="High-Definition Product Shot" data-desc="Render resolusi tinggi dengan depth of field dan kontras visual optimal.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-07.png" alt="High-Definition Product" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>High-Definition Studio</h3>
+            <p>Balanced depth & contrast</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-08.png" data-title="Commercial Packshot AI" data-desc="Packshot visual untuk etalase e-commerce dan materi katalog digital.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-08.png" alt="Commercial Packshot" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Commercial Packshot</h3>
+            <p>Clean e-commerce product asset</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-09.png" data-title="Multi-Angle Product Rendering" data-desc="Visualisasi sudut produk dengan detail jahitan dan material realistis.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-09.png" alt="Multi-Angle Product" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Material Detail Rendering</h3>
+            <p>Leather grain texture accuracy</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-ai" data-type="image" data-src="assets/portfolio/foto-ai/foto-ai-10.png" data-title="Atmospheric Bag Showcase" data-desc="Showcase tas dalam lingkungan bertema workshop klasik.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-ai/foto-ai-10.png" alt="Atmospheric Bag Showcase" loading="lazy">
+            <span class="card-tag">AI Photo</span>
+          </div>
+          <div class="card-caption">
+            <h3>Workshop Showcase</h3>
+            <p>Artisanal leathercraft setting</p>
+          </div>
+        </div>
+
+
+        <!-- ==================== 3. FOTO EDITING ==================== -->
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-01.jpg" data-title="Poster Live Streaming — Silverside" data-desc="Desain poster promosi acara live e-commerce dibuat dengan Canva & Photoshop.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-01.jpg" alt="Poster Live Silverside" loading="lazy">
+            <span class="card-tag">Canva & Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Silverside Live Poster</h3>
+            <p>Commercial live event graphic</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-02.jpg" data-title="Payday Sale Promotional Banner" data-desc="Materi kampanye diskon gajian dengan tipografi Canva & visual tegas.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-02.jpg" alt="Payday Sale Banner" loading="lazy">
+            <span class="card-tag">Canva & Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Payday Campaign Banner</h3>
+            <p>Typography & promo asset</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-03.jpg" data-title="Coming Soon Collection Teaser" data-desc="Desain teaser peluncuran koleksi baru dengan vibe misterius dan estetika streetwear.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-03.jpg" alt="Coming Soon Teaser" loading="lazy">
+            <span class="card-tag">Canva & Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Coming Soon Teaser</h3>
+            <p>Streetwear apparel launch visual</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-08.jpg" data-title="Instagram Story Feed Asset 01" data-desc="Format story 9:16 yang dioptimalkan untuk engagement dan swipe-up link media sosial.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-08.jpg" alt="Instagram Story 01" loading="lazy">
+            <span class="card-tag">Canva & Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Social Story Asset 01</h3>
+            <p>High-engagement story layout</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-09.jpg" data-title="Instagram Story Feed Asset 02" data-desc="Koleksi layout story kedua untuk showcasing varian produk dan detail harga.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-09.jpg" alt="Instagram Story 02" loading="lazy">
+            <span class="card-tag">Canva & Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Social Story Asset 02</h3>
+            <p>Product showcase variation</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-04.jpg" data-title="Apparel Backprint Detail Retouch" data-desc="Manipulasi latar belakang dan perbaikan kontras sablon produk streetwear.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-04.jpg" alt="Backprint Detail" loading="lazy">
+            <span class="card-tag">Retouching</span>
+          </div>
+          <div class="card-caption">
+            <h3>Backprint Detail Retouch</h3>
+            <p>Apparel color grading & isolation</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-05.jpg" data-title="Studio Product Isolation" data-desc="Pembersihan background dan penyelarasan tone warna katalog fashion.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-05.jpg" alt="Studio Product Isolation" loading="lazy">
+            <span class="card-tag">Retouching</span>
+          </div>
+          <div class="card-caption">
+            <h3>Product Isolation</h3>
+            <p>Clean studio lookbook asset</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-06.jpg" data-title="Lookbook Editorial Retouch" data-desc="Koreksi warna pakaian dan penyesuaian skin tone model secara profesional.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-06.jpg" alt="Lookbook Editorial Retouch" loading="lazy">
+            <span class="card-tag">Retouching</span>
+          </div>
+          <div class="card-caption">
+            <h3>Lookbook Retouch 01</h3>
+            <p>Color fidelity & skin tone balance</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-07.jpg" data-title="Urban Lookbook Edit" data-desc="Grading sinematik bertema perkotaan untuk katalog musiman.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-07.jpg" alt="Urban Lookbook Edit" loading="lazy">
+            <span class="card-tag">Retouching</span>
+          </div>
+          <div class="card-caption">
+            <h3>Urban Lookbook Retouch</h3>
+            <p>Streetwear moody aesthetic</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-13.png" data-title="Creative Compositing & Blending" data-desc="Penggabungan aset grafis dengan foto produk untuk poster digital.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-13.png" alt="Creative Compositing" loading="lazy">
+            <span class="card-tag">Canva & Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Graphic Compositing</h3>
+            <p>Multi-layer visual compositing</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card image-card" data-category="foto-editing" data-type="image" data-src="assets/portfolio/foto-editing/foto-edit-14.png" data-title="Typographic Campaign Graphic" data-desc="Penyusunan tata letak tipografi modern dan elemen grafis untuk media sosial.">
+          <div class="card-media">
+            <img src="assets/portfolio/foto-editing/foto-edit-14.png" alt="Typographic Campaign" loading="lazy">
+            <span class="card-tag">Canva & Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Typographic Layout</h3>
+            <p>Editorial graphic composition</p>
+          </div>
+        </div>
+
+
+        <!-- ==================== 4. VIDEO EDITING ==================== -->
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-11.mp4" data-title="Droplets Workshop — Commercial" data-desc="Video komersial resmi Droplets Workshop diedit dengan CapCut Pro & sound design dinamis.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-11.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">CapCut Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Droplets Workshop Commercial</h3>
+            <p>High-energy commercial cut</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-02.mp4" data-title="Droplets Brand Showcase" data-desc="Eksplorasi brand identity Droplets dengan visual ritmis dan color grading dinamis.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-02.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">CapCut Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Droplets Brand Showcase</h3>
+            <p>Brand identity motion reel</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-08.mp4" data-title="Short-Form Retention Content" data-desc="Format video vertikal 9:16 berkecepatan tinggi dengan caption dinamis dan hook retensi tinggi.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-08.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">CapCut Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>High-Retention Vertical Reel</h3>
+            <p>Paced hook & dynamic captions</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-09.mp4" data-title="Video Editing Showreel" data-desc="Kompilasi portfolio video editing komersial, motion graphic, dan grading film pendek.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-09.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">CapCut & Premiere</span>
+          </div>
+          <div class="card-caption">
+            <h3>Commercial Editing Reel</h3>
+            <p>Post-production compilation</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-07.mp4" data-title="Silverside Streetwear Reel" data-desc="Konten video media sosial untuk brand pakaian Silverside dengan musik trend dan beat sync.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-07.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">CapCut Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Silverside Campaign Cut</h3>
+            <p>Music-synced apparel promotion</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-01.mp4" data-title="Short Promo Cut" data-desc="Editing ringkas dengan efek visual modern untuk campaign reels Instagram.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-01.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">CapCut Edit</span>
+          </div>
+          <div class="card-caption">
+            <h3>Snappy Transition Promo</h3>
+            <p>Quick social cut & rhythm</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-04.mp4" data-title="Motion Graphics Outro 01" data-desc="Animasi end-screen dan outro logo untuk kanal video online.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-04.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">Motion</span>
+          </div>
+          <div class="card-caption">
+            <h3>Logo Reveal Outro 01</h3>
+            <p>Brand logo animation sequence</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card video-card" data-category="video-editing" data-type="video" data-src="assets/portfolio/video-editing/vid-edit-05.mp4" data-title="Motion Graphics Outro 02" data-desc="Variasi animasi outro dengan tipografi kinetik dan transisi bersih.">
+          <div class="card-media">
+            <video src="assets/portfolio/video-editing/vid-edit-05.mp4#t=0.5" preload="auto" muted playsinline></video>
+            <div class="play-overlay">
+              <div class="play-button"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+            </div>
+            <span class="card-tag">Motion</span>
+          </div>
+          <div class="card-caption">
+            <h3>Kinetic Outro 02</h3>
+            <p>Clean typography transition</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="skills section-pad" id="skills">
+  <!-- Skills Section (Apple Bento Style) -->
+  <section class="skills section-spacing" id="skills">
     <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <p class="label">Keahlian</p>
-        <h2 class="title">Tools & kemampuan saya.</h2>
+      <div class="section-header reveal">
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">Tools & Capabilities</h2>
+        <p class="section-desc">Penguasaan mendalam pada CapCut & Canva, diperkuat dengan generative AI terkini.</p>
       </div>
+
       <div class="skills-grid reveal">
-        <div class="skill-card"><div class="skill-icon">AI</div><h3>AI Prompting</h3><p>ChatGPT, Midjourney, Runway, Kling, Sora — Expert level</p><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
-        <div class="skill-card"><div class="skill-icon">VE</div><h3>Video Editing</h3><p>Premiere Pro, CapCut, DaVinci Resolve</p><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-        <div class="skill-card"><div class="skill-icon">PE</div><h3>Photo Editing</h3><p>Photoshop, Lightroom, Canva</p><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
-        <div class="skill-card"><div class="skill-icon">SM</div><h3>Social Media</h3><p>Instagram, TikTok, Content Strategy</p><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
-        <div class="skill-card"><div class="skill-icon">WD</div><h3>Web Development</h3><p>HTML, CSS, JS — dengan bantuan AI</p><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
-        <div class="skill-card"><div class="skill-icon">LS</div><h3>Live Streaming</h3><p>Host, presenter, product showcase</p><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+        <div class="skill-category-card">
+          <div class="skill-header">
+            <h3>Video Editing</h3>
+          </div>
+          <p class="skill-desc">Keahlian paling utama dalam editing video cepat, transisi, sound design, dan efek retensi tinggi.</p>
+          <ul class="skill-items">
+            <li><span>CapCut Pro / Desktop</span> <strong>Paling Mahir (Primary)</strong></li>
+            <li><span>Adobe Premiere Pro</span> <strong>Mahir</strong></li>
+            <li><span>DaVinci Resolve</span> <strong>Familiar</strong></li>
+            <li><span>Vertical Video / Reels / TikTok</span> <strong>Expertise</strong></li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-header">
+            <h3>Photo & Graphic</h3>
+          </div>
+          <p class="skill-desc">Keahlian utama dalam pembuatan poster komersial, banner promosi, dan feed media sosial.</p>
+          <ul class="skill-items">
+            <li><span>Canva Pro</span> <strong>Paling Mahir (Primary)</strong></li>
+            <li><span>Adobe Photoshop</span> <strong>Mahir</strong></li>
+            <li><span>Adobe Lightroom</span> <strong>Mahir</strong></li>
+            <li><span>Social Media Feed & Stories</span> <strong>Expertise</strong></li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-header">
+            <h3>Generative AI</h3>
+          </div>
+          <p class="skill-desc">Pemanfaatan AI mutakhir untuk upscaling detail dan penciptaan video sinematik.</p>
+          <ul class="skill-items">
+            <li><span>Kling AI</span> <strong>Mahir (Generative Video)</strong></li>
+            <li><span>Magnific AI</span> <strong>Mahir (Upscale & Detail)</strong></li>
+            <li><span>Runway Gen-3 Alpha</span> <strong>Mahir</strong></li>
+            <li><span>Midjourney v6</span> <strong>Biasa Saja / Menengah</strong></li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-header">
+            <h3>Strategy & Operations</h3>
+          </div>
+          <p class="skill-desc">Penyusunan strategi konten, manajemen kalender publikasi, analisis insight, dan event.</p>
+          <ul class="skill-items">
+            <li><span>Instagram & TikTok Strategy</span> <strong>Mahir</strong></li>
+            <li><span>Editorial Calendar Planning</span> <strong>Mahir</strong></li>
+            <li><span>Live Commerce Presentation</span> <strong>Mahir</strong></li>
+            <li><span>Wedding Event Direction</span> <strong>Mahir</strong></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact section-pad" id="contact">
+  <!-- Contact Section -->
+  <section class="contact section-spacing" id="contact">
     <div class="container">
-      <div class="contact-wrapper reveal">
-        <div class="contact-left">
-          <p class="label">Hubungi Saya</p>
-          <h2 class="title">Mari berkolaborasi.</h2>
-          <p class="body-text" style="max-width:420px;">Saya terbuka untuk peluang kerja, freelance project, dan kolaborasi kreatif. Jangan ragu untuk menghubungi.</p>
-          <div class="contact-links">
-            <a href="mailto:erickzachary27@gmail.com" class="contact-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <div><span>Email</span><strong>erickzachary27@gmail.com</strong></div>
+      <div class="contact-box reveal">
+        <div class="contact-details">
+          <span class="section-tag">Contact</span>
+          <h2 class="contact-title">Let’s collaborate.</h2>
+          <p class="contact-sub">
+            Terbuka untuk peluang kerja sama produksi video AI, creative direction, atau pengelolaan media sosial brand Anda.
+          </p>
+
+          <div class="contact-list">
+            <a href="https://wa.me/6285938516986" target="_blank" class="contact-card-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">WhatsApp</span>
+                <strong class="contact-val">+62 859-3851-6986</strong>
+              </div>
             </a>
-            <a href="https://wa.me/6285938516986" target="_blank" class="contact-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <div><span>WhatsApp</span><strong>+62 859-3851-6986</strong></div>
+
+            <a href="mailto:erickzachary27@gmail.com" class="contact-card-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Email</span>
+                <strong class="contact-val">erickzachary27@gmail.com</strong>
+              </div>
             </a>
-            <a href="https://www.instagram.com/erickzacharyc_/" target="_blank" class="contact-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg>
-              <div><span>Instagram</span><strong>@erickzacharyc_</strong></div>
+
+            <a href="https://www.instagram.com/erickzacharyc_/" target="_blank" class="contact-card-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Instagram</span>
+                <strong class="contact-val">@erickzacharyc_</strong>
+              </div>
             </a>
-            <a href="https://www.tiktok.com/@erickkk_zc?is_from_webapp=1&sender_device=pc" target="_blank" class="contact-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3v11a7 7 0 1 1-7-7v3a4 4 0 0 0 4 4z"></path></svg>
-              <div><span>TikTok</span><strong>@erickkk_zc</strong></div>
+
+            <a href="https://www.tiktok.com/@erickkk_zc?is_from_webapp=1&sender_device=pc" target="_blank" class="contact-card-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3v11a7 7 0 1 1-7-7v3a4 4 0 0 0 4 4z"/></svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">TikTok</span>
+                <strong class="contact-val">@erickkk_zc</strong>
+              </div>
             </a>
           </div>
         </div>
-        <div class="contact-right">
-          <div class="contact-card">
-            <div class="contact-card-header">
-              <img src="assets/profile.jpeg" alt="Erick">
-              <div><strong>Erick Zachary Cantona</strong><span>Creative Director</span></div>
+
+        <div class="contact-card-visual">
+          <div class="business-card-inner">
+            <div class="business-card-header">
+              <img src="assets/profile.jpeg" alt="Erick Zachary Cantona" class="business-avatar" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80'">
+              <div>
+                <h4>Erick Zachary Cantona</h4>
+                <p>Creative & AI Specialist</p>
+              </div>
             </div>
-            <div class="contact-card-body">
-              <p>Bandung, Indonesia</p>
-              <p>Universitas Pendidikan Indonesia</p>
-              <p>Teknologi Pendidikan — Semester Akhir</p>
+
+            <div class="business-card-body">
+              <div class="biz-info-row">
+                <span>Usia</span>
+                <strong>22 Tahun</strong>
+              </div>
+              <div class="biz-info-row">
+                <span>Role</span>
+                <strong>Social Media Management</strong>
+              </div>
+              <div class="biz-info-row">
+                <span>Kantor</span>
+                <strong>Droplets Workshop</strong>
+              </div>
+              <div class="biz-info-row">
+                <span>Pendidikan</span>
+                <strong>UPI Bandung (S1)</strong>
+              </div>
+              <div class="biz-info-row">
+                <span>Domisili</span>
+                <strong>Bandung, Indonesia</strong>
+              </div>
             </div>
-            <a href="mailto:erickzachary27@gmail.com" class="btn-primary" style="width:100%;text-align:center;">Kirim Email</a>
+
+            <div class="business-card-footer">
+              <a href="https://wa.me/6285938516986?text=Halo%20Erick,%20saya%20tertarik%20bekerja%20sama%20dengan%20Anda." target="_blank" class="btn btn-primary btn-block">
+                <span>Direct Message</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -303,22 +1039,39 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2026 Erick Zachary Cantona. Crafted with passion.</p>
-        <div class="footer-links">
-          <a href="https://www.instagram.com/erickzacharyc_/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg></a>
-          <a href="https://www.tiktok.com/@erickkk_zc?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3v11a7 7 0 1 1-7-7v3a4 4 0 0 0 4 4z"></path></svg></a>
-          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-        </div>
+    <div class="container footer-container">
+      <div class="footer-brand-side">
+        <p class="footer-copy-text">
+          &copy; 2026 Erick Zachary Cantona. Designed with clarity & precision.
+        </p>
+      </div>
+
+      <div class="footer-social-links">
+        <a href="https://www.instagram.com/erickzacharyc_/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@erickkk_zc?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3v11a7 7 0 1 1-7-7v3a4 4 0 0 0 4 4z"/></svg>
+        </a>
+        <a href="mailto:erickzachary27@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
       </div>
     </div>
   </footer>
 
-  <!-- Lightbox -->
+  <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose">&times;</button>
-    <div class="lightbox-content" id="lightboxContent"></div>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&times;</button>
+    <div class="lightbox-dialog">
+      <div class="lightbox-media-container" id="lightboxMediaContainer">
+        <!-- Media inserted by JavaScript -->
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption">
+        <h4 id="lightboxTitle">Project Title</h4>
+        <p id="lightboxDesc">Project Description...</p>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
